@@ -201,7 +201,8 @@
 					<input type="text" name="tanggal_absen" id="tanggal_absen" class="form-control"
 						   placeholder="Tanggal" value="<?= date_indo(date('Y-m-d')) ?>" readonly>
 				</div>
-			</div>  -->
+				 -->
+			</div> 
 			<div class="modal-footer">
 				<input type="reset" class="btn btn-secondary btn-bg-gradient-x-red-pink" data-dismiss="modal"
 					   value="Tutup">
@@ -211,6 +212,7 @@
 		</div>
 	</div>
 </div>
+
 
 <!-- Modal lihat -->
 <div class="modal fade text-left" id="lihat" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35"

@@ -81,6 +81,8 @@ $route['jabatan/hapus/(:any)'] = 'JabatanController/hapus/$1';
 
 $route['absen'] = 'AbsenController';
 $route['absen/tambah'] = 'AbsenController/tambah';
+$route['absen/lihat/(:any)'] = 'AbsenController/lihat/$1';
+
 $route['absen/lembur/(:any)'] = 'AbsenController/lembur/$1';
 $route['absen/update'] = 'AbsenController/update';
 $route['absen/hapus/(:any)'] = 'AbsenController/hapus/$1';
