@@ -316,7 +316,7 @@
 				</fieldset>
 				<fieldset class="form-group floating-label-form-group">
 					<label for="edit_absen">Jumlah Hadir</label>
-					<input type="text" class="form-control" name="absen_rekap" id="edit_absen" placeholder="Rekap Absen"
+					<input type="text" class="form-control" name="absen" id="edit_absen" placeholder="Rekap Absen"
 						   autocomplete="off" required>
 				</fieldset>
 				<fieldset class="form-group floating-label-form-group">

@@ -66,15 +66,13 @@ class AbsenController extends CI_Controller
 			$id = $this->input->post('id');
 			$karyawan = $this->input->post('karyawan');
 			$absen = $this->input->post('absen');
-			$mata = $this->input->post('mata');
-			$tanggalGabung = $this->input->post('tanggal_gabung');
+			$mata = $this->input->post('mata_pelajaran');
 			$gajiId = $this->input->post('jabatan');
 			$data = array(
 				'absen_karyawan_id' => $karyawan,
 				'absen_rekap' => $absen,
 				'mata_pelajaran' => $mata,
-				'karyawan_tanggal_gabung' => $tanggalGabung,
-				'karyawan_jabatan_id' => $gajiId
+				'absen_jabatan_id' => $gajiId
 			);
 			$save = $this->AbsenModel->update_absen($id,$data);
 			if ($save>0){

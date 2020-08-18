@@ -218,9 +218,8 @@ $(document).ready(function () {
 				if (response != null){
 					$('#karyawan_id').val(response.karyawan_id);
 					$('#edit_nama').val(response.karyawan_nama);
-					$('#edit_rekap').val(response.absen_rekap);
-					$('#edit_mata').val(response.mata_pelajaran);;
-					$('#edit_tg').val(response.karyawan_tanggal_gabung);
+					$('#edit_absen').val(response.absen_rekap);
+					$('#edit_mata').val(response.mata_pelajaran);
 					$('#edit_jabatan_karyawan').val(response.gaji_jabatan);
 
 					console.log(response);
