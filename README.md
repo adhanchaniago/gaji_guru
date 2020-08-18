@@ -1,0 +1,2 @@
+# gaji_guru
+ 
