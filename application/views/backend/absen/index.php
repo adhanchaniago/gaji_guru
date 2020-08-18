@@ -310,7 +310,7 @@
 			<div class="modal-body">
 				<fieldset class="form-group floating-label-form-group">
 					<label for="edit_nama">Nama</label>
-					<input type="hidden" id="karyawan_id" name="id">
+					<input type="hidden" id="absen_id" name="id">
 					<input type="text" class="form-control" name="nama" id="edit_nama" placeholder="Nama"
 						   autocomplete="off" required>
 				</fieldset>
