@@ -229,6 +229,7 @@
 					<input type="text" class="form-control" name="nama" id="lihat_nama" placeholder="Nama Karyawan"
 						   autocomplete="off" readonly>
 				</fieldset>
+				
 				<fieldset class="form-group floating-label-form-group">
 					<label for="lihat_tempat">Tempat Lahir</label>
 					<input type="text" class="form-control" name="tempat_lahir" id="lihat_tempat" value=""
