@@ -6,7 +6,7 @@ class GajiController extends CI_Controller{
 	public function __construct()
 	{
 		parent::__construct();
-		$model = array('GajiModel','PinjamModel', 'KaryawanModel');
+		$model = array('GajiModel', 'KaryawanModel','JabatanModel');
 		$helper = array('tgl_indo','nominal');
 		$this->load->model($model);
 		$this->load->helper($helper);
@@ -19,6 +19,8 @@ class GajiController extends CI_Controller{
 	public function index(){
 		$data = array(
 			'gaji' => $this->GajiModel->lihat_gaji(),
+			'karyawan' => $this->KaryawanModel->lihat_karyawan(),
+			'jabatan' => $this->JabatanModel->lihat_jabatan(),
 			'title' => 'Gaji'
 		);
 		$this->load->view('templates/header',$data);
@@ -30,12 +32,11 @@ class GajiController extends CI_Controller{
 		if (isset($_POST['simpan'])){
 			$generate = substr(time(), 5);
 			$id = 'PEG-' . $generate;
-			$nama = $this->input->post('nama');
-			$gaji_total = $this->input->post('gaji_total');
+			$karyawan = $this->input->post('karyawan');
 			$gaji_tanggal = $this->input->post('gaji_tanggal');
 			$gaji_bulan = $this->input->post('gaji_bulan');
-			$gaji_status = $this->input->post('gaji_status');
-			$gaji_date_created = $this->input->post('gaji_date_created');
+			// $gaji_status = $this->input->post('gaji_status');
+			// $gaji_date_created = $this->input->post('gaji_date_created');
 			$gajiId = $this->input->post('jabatan');
 			$nomorHp = $this->input->post('nomor_hp');
 			$gawali = $this->input->post('gawali');
@@ -43,21 +44,20 @@ class GajiController extends CI_Controller{
 			$mejar = $this->input->post('mejar');
 			$piket = $this->input->post('piket');
 			$prog = $this->input->post('prog');
-			$nomorRek = $this->input->post('nomor_rekening');
+			$jam = $this->input->post('jam_ngajar');
 			$data = array(
-				'karyawan_id' => $id,
-				'karyawan_nama' => $nama,
-				'gaji_total' => $gaji_total,
+				'gaji_karyawan_id' => $karyawan,
 				'gaji_tanggal' => $gaji_tanggal,
-				'gaji_bulan' => $gaji_bulan,
-				'gaji_status' => $gaji_status,
-				'gaji_date_created' => $gaji_date_created,
+				'gaji_bulan_ke' => $gaji_bulan,
+				// 'gaji_status' => $gaji_status,
+				// 'gaji_date_created' => $gaji_date_created,
 				'gawali' => $gawali,
 				'trasi' => $trasi,
 				'mejar' => $mejar,
 				'piket' => $piket,
 				'prog' => $prog,
-				'karyawan_jabatan_id' => $gajiId
+				'jam_ngajar' => $jam,
+				'gaji_jabatan_id' => $gajiId
 			);
 			$save = $this->GajiModel->tambah_gaji($data);
 			if ($save>0){
@@ -90,11 +90,10 @@ class GajiController extends CI_Controller{
 		public function update(){
 			if (isset($_POST['update'])){
 				$nama = $this->input->post('nama');
-				$gaji_total = $this->input->post('gaji_total');
 				$gaji_tanggal = $this->input->post('gaji_tanggal');
 				$gaji_bulan = $this->input->post('gaji_bulan');
-				$gaji_status = $this->input->post('gaji_status');
-				$gaji_date_created = $this->input->post('gaji_date_created');
+				// $gaji_status = $this->input->post('gaji_status');
+				// $gaji_date_created = $this->input->post('gaji_date_created');
 				$gajiId = $this->input->post('jabatan');
 				$nomorHp = $this->input->post('nomor_hp');
 				$gawali = $this->input->post('gawali');
@@ -102,21 +101,21 @@ class GajiController extends CI_Controller{
 				$mejar = $this->input->post('mejar');
 				$piket = $this->input->post('piket');
 				$prog = $this->input->post('prog');
-				$nomorRek = $this->input->post('nomor_rekening');
+				$jam = $this->input->post('jam_ngajar');
 				$data = array(
 					'karyawan_id' => $id,
-					'karyawan_nama' => $nama,
-					'gaji_total' => $gaji_total,
+					'gaji_karyawan_id' => $karyawan,
 					'gaji_tanggal' => $gaji_tanggal,
 					'gaji_bulan' => $gaji_bulan,
-					'gaji_status' => $gaji_status,
-					'gaji_date_created' => $gaji_date_created,
+					// 'gaji_status' => $gaji_status,
+					// 'gaji_date_created' => $gaji_date_created,
 					'gawali' => $gawali,
 					'trasi' => $trasi,
 					'mejar' => $mejar,
 					'piket' => $piket,
 					'prog' => $prog,
-					'karyawan_jabatan_id' => $gajiId
+					'jam_ngajar' => $jam,
+					'gaji_jabatan_id' => $gajiId
 				);
 				$save = $this->GajiModel->update_gaji($id,$data);
 				if ($save>0){
@@ -138,4 +137,9 @@ class GajiController extends CI_Controller{
 				redirect('gaji');
 			}
 		}
+
+		public function ajaxIndex(){
+			echo json_encode($this->GajiModel->lihat_gaji());
+		}
+
 	}

@@ -82,7 +82,6 @@ $route['jabatan/hapus/(:any)'] = 'JabatanController/hapus/$1';
 $route['absen'] = 'AbsenController';
 $route['absen/tambah'] = 'AbsenController/tambah';
 $route['absen/lihat/(:any)'] = 'AbsenController/lihat/$1';
-
 $route['absen/lembur/(:any)'] = 'AbsenController/lembur/$1';
 $route['absen/update'] = 'AbsenController/update';
 $route['absen/hapus/(:any)'] = 'AbsenController/hapus/$1';
@@ -93,6 +92,10 @@ $route['gaji/lihat/(:any)'] = 'GajiController/lihat/$1';
 $route['gaji/bayar/(:any)'] = 'GajiController/bayar/$1';
 $route['gaji/pinjam/(:any)'] = 'GajiController/pinjam/$1';
 $route['gaji/detail/(:any)'] = 'GajiController/detail/$1';
+$route['gaji/tambah'] = 'GajiController/tambah_gaji';
+$route['gaji/update'] = 'GajiController/update';
+$route['gaji/hapus/(:any)'] = 'GajiController/hapus/$1';
+$route['gaji/ajaxIndex'] = 'GajiController/ajaxIndex';
 
 $route['pinjam'] = 'PinjamController';
 $route['pinjam/tambah'] = 'PinjamController/tambah';

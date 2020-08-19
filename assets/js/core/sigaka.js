@@ -190,9 +190,8 @@ $(document).ready(function () {
 			success: function (response) {
 				if (response != null){
 					$('#lihat_nama').val(response.karyawan_nama);
-					$('#lihat_rekap').val(response.absen_rekap);
+					$('#lihat_absen').val(response.absen_rekap);
 					$('#lihat_mata').val(response.mata_pelajaran);
-					$('#lihat_tg').val(response.karyawan_tanggal_gabung);
 					$('#lihat_jabatan_karyawan').val(response.jabatan_nama);
 
 					console.log(response);
@@ -216,7 +215,7 @@ $(document).ready(function () {
 			dataType : 'json',
 			success: function (response) {
 				if (response != null){
-					$('#karyawan_id').val(response.karyawan_id);
+					$('#absen_id').val(response.absen_id);
 					$('#edit_nama').val(response.karyawan_nama);
 					$('#edit_absen').val(response.absen_rekap);
 					$('#edit_mata').val(response.mata_pelajaran);

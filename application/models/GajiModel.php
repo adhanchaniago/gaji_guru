@@ -11,7 +11,8 @@ class GajiModel extends CI_Model{
 
 	public function lihat_gaji(){
 		$this->db->select('*');
-		$this->db->from('sigaka_karyawan');
+		$this->db->from('sigaka_gaji');
+		$this->db->join('sigaka_karyawan', 'sigaka_karyawan.karyawan_id = sigaka_gaji.gaji_karyawan_id');
 		$this->db->join('sigaka_jabatan', 'sigaka_jabatan.jabatan_id = sigaka_karyawan.karyawan_jabatan_id');
 		$this->db->order_by('karyawan_nama','ASC');
 		$query = $this->db->get();

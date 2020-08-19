@@ -144,6 +144,11 @@
 					<input type="text" class="form-control" name="prog" id="prog" placeholder="IT program"
 						   autocomplete="off" required>
 				</fieldset>
+				<fieldset class="form-group floating-label-form-group">
+					<label for="jam">Jam Ngajar</label>
+					<input type="text" class="form-control" name="jam_ngajar" id="jam_ngajar" placeholder="Jam Ngajar"
+						   autocomplete="off" required>
+				</fieldset>
 			<div class="modal-footer">
 				<input type="reset" class="btn btn-secondary btn-bg-gradient-x-red-pink" data-dismiss="modal"
 					   value="Tutup">

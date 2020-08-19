@@ -94,6 +94,8 @@
 	</div>
 </div>
 
+
+
 <!-- Modal tambah -->
 <div class="modal fade text-left" id="bootstrap" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35"
 	 aria-hidden="true">
@@ -347,22 +349,5 @@
 </div>
 
 
-<!-- Modal hapus -->
-<div class="modal fade text-left" id="hapus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h3 class="modal-title" id="myModalLabel35"> Hapus Data Karyawan ?</h3>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-footer">
-				<input type="reset" class="btn btn-secondary btn-bg-gradient-x-blue-cyan" data-dismiss="modal" value="Tutup">
-				<div id="hapuskaryawan">
 
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+

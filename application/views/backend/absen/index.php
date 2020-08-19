@@ -149,7 +149,24 @@
 	</div>
 </div>
 </div>
+<div class="modal fade text-left" id="hapus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title" id="myModalLabel35"> Hapus Data Absen ?</h3>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+				<div class="modal-footer">
+					<input type="reset" class="btn btn-secondary btn-bg-gradient-x-blue-cyan" data-dismiss="modal" value="Tutup">
+					<div id="hapusabsen">
 
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
 <!-- Modal tambah -->
 <div class="modal fade text-left" id="tambah" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35"
 	 aria-hidden="true">
@@ -176,7 +193,7 @@
 					</select>
 				</div>
 				<div class="form-group floating-label-form-group">
-						<label for="rekap_absen">Hadir/masuk</label>
+						<label for="rekap_absen">JUmlah Hadir</label>
 						<input type="text" class="form-control" name="rekap_absen" id="rekap_absen" placeholder="Jumlah hadir">
 					</div>
 				 <div class="form-group floating-label-form-group">
@@ -220,70 +237,31 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h3 class="modal-title" id="myModalLabel35"> Lihat Data Karyawan</h3>
+				<h3 class="modal-title" id="myModalLabel35"> Lihat Data Absen</h3>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
 			<div class="modal-body">
 				<fieldset class="form-group floating-label-form-group">
-					<label for="lihat_nama">Nama / Wali Kelas</label>
+					<label for="lihat_nama">Nama Guru</label>
 					<input type="text" class="form-control" name="nama" id="lihat_nama" placeholder="Nama Karyawan"
 						   autocomplete="off" readonly>
 				</fieldset>
 				<fieldset class="form-group floating-label-form-group">
-					<label for="lihat_tempat">Tempat Lahir</label>
-					<input type="text" class="form-control" name="tempat_lahir" id="lihat_tempat" value=""
-						   placeholder="Tempat Lahir" autocomplete="off" readonly>
+					<label for="lihat_mata">Mata Pelajaran</label>
+					<input type="text" class="form-control" name="mata" id="lihat_mata" value=""
+						   placeholder="Mata Pelajaran" autocomplete="off" readonly>
 				</fieldset>
 				<fieldset class="form-group floating-label-form-group">
-					<label for="lihat_tl">Tanggal Lahir</label>
-					<div class='input-group'>
-						<input type="date" class="form-control" name="tanggal_lahir" id="lihat_tl"
-							   placeholder="Tanggal Lahir" autocomplete="off" readonly>
-						<div class="input-group-append">
-										<span class="input-group-text">
-											<span class="ft-calendar"></span>
-										</span>
-						</div>
-					</div>
-				</fieldset>
-				<fieldset class="form-group floating-label-form-group">
-					<label for="lihat_alamat">Alamat</label>
-					<textarea class="form-control" id="lihat_alamat" rows="3" name="alamat" placeholder="Alamat"
-							  autocomplete="off" readonly></textarea>
-				</fieldset>
-				<fieldset class="form-group floating-label-form-group">
-					<label for="lihat_tg">Tanggal Bergabung</label>
-					<div class='input-group'>
-						<input type="date" class="form-control" id="lihat_tg" name="tanggal_gabung"
-							   placeholder="Tanggal Bergabung" autocomplete="off" readonly>
-						<div class="input-group-append">
-										<span class="input-group-text">
-											<span class="ft-calendar"></span>
-										</span>
-						</div>
-					</div>
+					<label for="lihat_absen">Jumlah Hadir</label>
+					<input type="text" class="form-control" name="absen" id="lihat_absen" value=""
+						   placeholder="Jumlah Hadir" autocomplete="off" readonly>
 				</fieldset>
 				<fieldset class="form-group floating-label-form-group">
 					<label for="lihat_jabatan_karyawan">Jabatan</label>
 					<input type="text" class="form-control" name="jabatan" id="lihat_jabatan_karyawan"
 						   placeholder="Jabatan" autocomplete="off" readonly>
-				</fieldset>
-				<fieldset class="form-group floating-label-form-group">
-					<label for="lihat_gaji_pokok">Gaji Perhari</label>
-					<input type="text" class="form-control" name="jabatan" id="lihat_gaji_pokok"
-						   placeholder="Gaji pokok" autocomplete="off" readonly>
-				</fieldset>
-				<fieldset class="form-group floating-label-form-group">
-					<label for="lihat_nohp">Nomor HP</label>
-					<input type="number" class="form-control" id="lihat_nohp" name="nomor_hp" placeholder="Nomor HP"
-						   autocomplete="off" readonly>
-				</fieldset>
-				<fieldset class="form-group floating-label-form-group">
-					<label for="lihat_mapel">Mata Pelajaran</label>
-					<input type="text" class="form-control" id="lihat_mapel" name="mapel" placeholder="Mapel"
-						   autocomplete="off" readonly>
 				</fieldset>
 			</div>
 			<div class="modal-footer">
@@ -321,7 +299,7 @@
 				</fieldset>
 				<fieldset class="form-group floating-label-form-group">
 					<label for="edit_mata">Mata Pelajaran</label>
-					<textarea class="form-control" id="edit_mata" rows="3" name="mata" placeholder="Mata Pelajaran"
+					<textarea class="form-control" id="edit_mata" rows="3" name="mata_pelajaran" placeholder="Mata Pelajaran"
 							  autocomplete="off" required></textarea>
 				</fieldset>
 				<fieldset class="form-group floating-label-form-group">
@@ -348,23 +326,7 @@
 
 
 <!-- Modal hapus -->
-<div class="modal fade text-left" id="hapus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel35" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h3 class="modal-title" id="myModalLabel35"> Hapus Data Absen ?</h3>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-				<div class="modal-footer">
-					<input type="reset" class="btn btn-secondary btn-bg-gradient-x-blue-cyan" data-dismiss="modal" value="Tutup">
-					<div id="hapusabsen">
 
-					</div>
-				</div>
-		</div>
-	</div>
 
 
 <!-- Modal lembur -->

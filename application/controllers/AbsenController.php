@@ -64,12 +64,10 @@ class AbsenController extends CI_Controller
 	public function update(){
 		if (isset($_POST['update'])){
 			$id = $this->input->post('id');
-			$karyawan = $this->input->post('karyawan');
 			$absen = $this->input->post('absen');
 			$mata = $this->input->post('mata_pelajaran');
 			$gajiId = $this->input->post('jabatan');
 			$data = array(
-				'absen_karyawan_id' => $karyawan,
 				'absen_rekap' => $absen,
 				'mata_pelajaran' => $mata,
 				'absen_jabatan_id' => $gajiId
